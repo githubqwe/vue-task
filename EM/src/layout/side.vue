@@ -4,7 +4,7 @@
       @open="handleOpen"
       @close="handleClose"
       :unique-opened='true'
-      router=true
+      :router='true'
        >
       <el-submenu index="1">
         <template slot="title">

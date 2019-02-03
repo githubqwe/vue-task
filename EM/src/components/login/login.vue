@@ -68,6 +68,8 @@ export default {
               type: "success"
             });
             this.$router.push('/home')
+            // 设置token
+            window.localStorage.setItem('token',data.token)
           } else {
             this.$message.error("登录失败");
           }
@@ -96,6 +98,7 @@ export default {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 5px;
 }
 .box #mybtn {
   width: 100%;

@@ -11,7 +11,7 @@
         <side />
       </el-aside>
       <el-main>
-          <router-view />
+        <router-view />
       </el-main>
     </el-container>
   </el-container>
@@ -24,6 +24,13 @@ export default {
   components: {
     headers,
     side
+  },
+  beforeMount() {
+    if (!window.localStorage.getItem("token")) {
+      this.$message.error('请登录')
+      this.$router.push("/login");
+      return;
+    }
   }
 };
 </script>
