@@ -67,9 +67,9 @@ export default {
               message: "登录成功",
               type: "success"
             });
-            this.$router.push('/home')
-            // 设置token
+            // 这里注意 登录成功后一定要先设置token 再跳转(如果先进行跳转这时跳转到home页 检测到没有token,就会跳回登录页 需要点击两次登录按钮)
             window.localStorage.setItem('token',data.token)
+            this.$router.push('/home')
           } else {
             this.$message.error("登录失败");
           }

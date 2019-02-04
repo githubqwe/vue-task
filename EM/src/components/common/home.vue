@@ -25,13 +25,13 @@ export default {
     headers,
     side
   },
-  beforeMount() {
-    if (!window.localStorage.getItem("token")) {
-      this.$message.error('请登录')
-      this.$router.push("/login");
-      return;
-    }
-  }
+  // beforeMount() {
+  //   if (!window.localStorage.getItem("token")) {
+  //     this.$message.error('请登录')
+  //     this.$router.push("/login");
+  //     return;
+  //   }
+  // }
 };
 </script>
 
